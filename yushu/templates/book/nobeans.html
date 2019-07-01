@@ -1,0 +1,158 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+
+
+    <title>鱼书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet"
+          href="/static/3rd/ui/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
+
+ <link rel="stylesheet" href="/static/css/not-enough.css">
+
+
+<body>
+
+    <div class="nav-self">
+        <div style="padding-top: inherit" class="container">
+            <form class="form-inline" action="/book/search" method="get">
+                <div class="flex-vertical-center-height">
+                    <div class="col-md-2  col-xs-3 logo">
+                        <img src="/static/images/logo-yushu.png"/>
+                    </div>
+                    <div style="margin-left:20px;" class="col-md-7  col-xs-6 input-group">
+                        <input name="q" type="text" placeholder="ISBN、图书名称"
+                               class="form-control input-sm">
+                        <span class="input-group-btn">
+                            <input class="btn btn-search" type="submit" value="搜索"/>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-xs-3" style="padding-right: 0">
+
+
+
+
+                        <div class="container-height flex-vertical-center login-box">
+
+                                <a href="/personal">z12z的鱼书</a>
+                                <a class="btn-end" href="/logout">注销</a>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sub-nav flex-vertical-center">
+        <div class="container" style="width: 100%">
+            <div class="row">
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <a id="recent" href="/"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/upload.png"/>
+                        <span>最近上传</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="gifts" href="/my/gifts"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/gift.png"/>
+                        <span>赠送清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="wishes" href="/my/wish"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/wish.png"/>
+                        <span>心愿清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="pending" href="/pending"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/fish.png"/>
+                        <span>鱼漂</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='container'>
+    <div class="row">
+
+
+
+
+    </div>
+
+    <div style="margin-top:60px;" class="row">
+        <div class="col-md-12 flex-vertical main-color">
+            <span style="margin-bottom: 10px;" class="large-title">你没有足够的鱼豆或超过限制</span></span>
+            <span>当前你有0.0个鱼豆</span>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <span class="main-color">
+                温馨提示：每请求1本书，需要消耗1个鱼豆；当你已经请求两本书时，你必须先赠送1本书籍。
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div style="margin-top:50px;margin-bottom:30px;" class="col-md-3">
+            <span class="description-font">以下是获取鱼豆的方式</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 bg">
+            <span>1.  上传图书</span>
+        </div>
+        <div class="col-md-9 bg-opacity">
+            <span>在搜索框内搜索书籍，并将书籍“加入到赠送清单” 即可获得0.5个鱼豆。务必确保你愿意赠送此书。</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 bg">
+            <span>2.  赠送图书</span>
+        </div>
+        <div class="col-md-9 bg-opacity">
+            <span>每成功赠送一本图书，我们将额外赠送你1个鱼豆。</span>
+        </div>
+    </div>
+
+</div>
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+</body>
+
+
+    <script src="/static/3rd/jquery-3.2.1.min.js"></script>
+    <script src="/static/3rd/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+
+</html>

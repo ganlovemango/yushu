@@ -1,0 +1,241 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+
+
+    <title>鱼书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet"
+          href="/static/3rd/ui/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon"
+          href="/static/images/icon.png">
+
+    <link rel="stylesheet" href="/static/3rd/ui/remodal.css">
+    <link rel="stylesheet" href="/static/3rd/ui/remodal-default-theme.css">
+    <link rel="stylesheet" href="/static/css/book-detail.css">
+
+
+<body>
+
+    <div class="nav-self">
+        <div style="padding-top: inherit" class="container">
+            <form class="form-inline" action="/book/search" method="get">
+                <div class="flex-vertical-center-height">
+                    <div class="col-md-2  col-xs-3 logo">
+                        <img src="/static/images/logo-yushu.png"/>
+                    </div>
+                    <div style="margin-left:20px;" class="col-md-7  col-xs-6 input-group">
+                        <input name="q" type="text" placeholder="ISBN、图书名称"
+                               class="form-control input-sm">
+                        <span class="input-group-btn">
+                            <input class="btn btn-search" type="submit" value="搜索"/>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-xs-3" style="padding-right: 0">
+
+
+
+
+                        <div class="container-height flex-vertical-center login-box">
+
+                                <a href="/personal">苦海翻起爱恨的鱼书</a>
+                                <a class="btn-end" href="/logout">注销</a>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sub-nav flex-vertical-center">
+        <div class="container" style="width: 100%">
+            <div class="row">
+                <div class="col-md-2 col-xs-3 col-md-offset-2">
+                    <a id="recent" href="/"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/upload.png"/>
+                        <span>最近上传</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="gifts" href="/my/gifts"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/gift.png"/>
+                        <span>赠送清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="wishes" href="/my/wish"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/wish.png"/>
+                        <span>心愿清单</span>
+                    </a>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <a id="pending" href="/pending"
+                       class="flex-vertical-hor-center">
+                        <img src="/static/images/fish.png"/>
+                        <span>鱼漂</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='container'>
+    <div class="row">
+
+
+
+
+    </div>
+
+
+    <div class="row book-container my-detail-row" style="width: 100%">
+        <div class="col-md-2">
+            <img class="book-img" src="https://img3.doubanio.com/lpic/s3403254.jpg"/>
+        </div>
+        <div class="col-md-5 flex-vertical detail-con">
+            <div>
+                <h4>遇见未知的自己</h4>
+            </div>
+            <div class="description-font-margin">
+                <div>
+                    <span>作者:</span>
+                    <span>张德芬</span>
+                </div>
+                <div>
+                    <span>出版社:</span>
+                    <span>华夏出版社</span>
+                </div>
+                <div>
+                    <span>出版年：</span>
+                    <span>2008-1</span>
+                </div>
+                <div>
+                    <span>页数：</span>
+                    <span>249</span>
+                </div>
+                <div>
+                    <span>定价：</span>
+                    <span>￥29.00</span>
+                </div>
+                <div>
+                    <span>精装：</span>
+                    <span>平装</span>
+                </div>
+                <div>
+                    <span>ISBN：</span>
+                    <span id="isbn">9787508044019</span>
+                </div>
+
+                    <div class="color-count">
+                        <span>2人想要 / </span>
+                        <span>4人可赠送</span>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:30px; display: flex" class="row ">
+
+            <div class="col-md-3">
+                <span class="bg-info">已添加至赠送清单</span>
+            </div>
+
+    </div>
+    <div style="margin-top: 30px;" class="row">
+        <div class="col-md-2"><span class="description-title">内容简介</span></div>
+    </div>
+    <div style="margin-top:15px;" class="row">
+        <div class="col-md-11">
+            <p class="description-font">故事从“冬天的雨夜，在荒郊野外的山区，一个没有手机、没有汽油的孤单女人”开始。\n若菱，自名校毕业，拥有令人羡慕的工作，但心中却不时的自问：为什么我不能拥有想要的生活？为什么我不快乐？我该如何当自己生命的主人？ 在一个下雨的冬夜，若菱巧遇一名智慧老者，在与智者数度交谈的过程中，她渐渐填补不快乐、挫败的心灵缺口，寻回最真实勇敢的自我…… 你会不会担心和若菱一样，让身体的疲惫失控于华丽的业绩之中？ 你是否也想遇见在你心中的智慧老者，穿越心事的重重黑纱，遇见全新的自己？</p>
+        </div>
+    </div>
+
+
+        <div style="margin-top:30px; display: flex" class="row">
+            <div class="col-md-3"><span class="description-title">向他们赠送此书</span></div>
+        </div>
+        <hr style="margin-top:5px;"/>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    z12z
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-25
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/satisfy/wish/938?isbn=9787508044019">向他赠送此书</a>
+                </div>
+            </div>
+
+            <div style="margin-top:30px; display: flex" class="row">
+                <div class="col-md-1" style="width: 11em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                    嘻嘻
+                </div>
+                <div class="col-md-2 description-font">
+                    上传于2019-06-25
+                </div>
+                <div class="col-md-2">
+                    <a class="btn-normal"
+                       href="/satisfy/wish/941?isbn=9787508044019">向他赠送此书</a>
+                </div>
+            </div>
+
+
+    <div class="remodal" data-remodal-id="modal" role="dialog"
+         aria-labelledby="modal1Title" aria-describedby="modal1Desc"
+         data-remodal-options="closeOnOutsideClick: false">
+        <button data-remodal-action="close" class="remodal-close"
+                aria-label="Close"></button>
+        <div>
+            <h5 class="diag-title">
+                您确定拥有《遇见未知的自己》这本书吗？</h5>
+            <p id="modal1Desc" class="description-font">
+                如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。
+            </p>
+        </div>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-confirm">确定赠送</button>
+        <button data-remodal-action="cancel" class="remodal-cancel">不，算了</button>
+    </div>
+
+</div>
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+</body>
+
+
+
+    <script src="/static/3rd/jquery-3.2.1.min.js"></script>
+    <script src="/static/3rd/bootstrap.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+    <script src="/static/3rd/remodal.min.js"></script>
+    <script src="/static/js/book-detail.js"></script>
+
+
+</html>

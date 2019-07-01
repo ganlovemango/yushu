@@ -1,0 +1,98 @@
+﻿{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+
+
+    <title>鱼书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'picture/icon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+
+<body>
+<div class='container'>
+    <div class="row">
+        {% if a == 1 %}
+        <div class="alert alert-warning" role="alert">[&#39;昵称不能为空，请填写昵称&#39;]</div>
+        {% elif a == 2 %}
+        <div class="alert alert-warning" role="alert">[&#39;昵称已经存在&#39;]</div>
+        {% elif b == 1 %}
+        <div class="alert alert-warning" role="alert">[&#39;邮箱不能为空&#39;]</div>
+        {% elif b == 2 %}
+        <div class="alert alert-warning" role="alert">[&#39;邮箱格式错误&#39;]</div>
+        {% elif b == 3 %}
+        <div class="alert alert-warning" role="alert">[&#39;邮箱已被注册&#39;]</div>
+        {% elif c == 1 %}
+        <div class="alert alert-warning" role="alert">[&#39;密码需要不少于8位字符&#39;]</div>
+        {% elif c == 2 %}
+        <div class="alert alert-warning" role="alert">[&#39;密码由数字和字母组成&#39;]</div>
+        {% endif %}
+
+    </div>
+    
+    <div class="row white-bg-margin">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="bg-container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <span class="big-title">鱼 书</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 flex-vertical personal-detail">
+                        {#注册提交部分#}
+                        <form action="{% url 'App:index_register' %}" method="post">
+                            {% csrf_token %}
+                            <input style="width:100%" id="username" name="username"
+                                   type="text"
+                                   placeholder="昵称"
+                                   class="none-input"
+                                   value="">
+                            <input style="width:100%" id="email" name="email" type="text"
+                                   placeholder="邮箱"
+                                   class="none-input"
+                                   value="">
+                            <input id="password" style="width:100%"
+                                   name="password"
+                                   placeholder="密码"
+                                   class="none-input" type="password">
+                            <input style="margin-top:15px;" id="btn-submit" type="submit"
+                                   class="btn btn-big btn-block" value="注册">
+                        </form>
+                        {#注册提交部分结束#}
+                    </div>
+                </div>
+                <div style="margin-top:30px;" class="row">
+                    <div class="col-md-8 text-center col-md-offset-2">
+                        <span class="description-font">已有账号？</span>
+                        {#直接跳到登录界面#}
+                        <a href="{% url 'App:index_login' %}">登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer" class="flex-hor-center">
+    <span>© 2017-2020 yushu.im created by 七月</span>
+</div>
+</body>
+
+
+    
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    <script>
+        $SCRIPT_ROOT = "";
+    </script>
+
+
+
+</html>
